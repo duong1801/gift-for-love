@@ -86,6 +86,10 @@ canvas {
   height: 420px;
 }
 
+#img {
+  color: red;
+}
+
 #pinkboard {
   position: relative;
   top: 0%;
