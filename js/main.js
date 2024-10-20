@@ -186,7 +186,13 @@ function createCanvas(properties) {
 
 update();
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  const audio = document.querySelector("#audio");
-  audio.play();
+document.addEventListener("click", () => {
+  audio
+    .play()
+    .then(() => {
+      audio.muted = false; // Bỏ tắt tiếng sau khi phát
+    })
+    .catch((error) => {
+      console.error("Error attempting to play audio:", error);
+    });
 });
